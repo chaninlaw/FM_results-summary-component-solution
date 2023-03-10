@@ -1,0 +1,241 @@
+/* Variables Styles */
+:root {
+    /* -------------------------------- Color */
+    --primary-red: hsla(0, 100%, 67%, 20%);
+    --primary-yellow: hsla(39, 100%, 56%, 20%);
+    --primary-green: hwb(166 0% 26% / 0.2);
+    --primary-blue: hsla(234, 85%, 45%, 20%);
+    --primary-red-font: hsl(0, 100%, 67%);
+    --primary-yellow-font: hsl(39, 100%, 56%);
+    --primary-green-font: hsl(166, 100%, 37%);
+    --primary-blue-font: hsl(234, 85%, 45%);
+
+    /* -------------------------------- Gradients */
+    /* ------------------- Background */
+    --gradient-light-slate-blue: hsl(252, 100%, 67%);
+    --gradient-light-royal-blue: hsl(241, 81%, 54%);
+    /* ------------------- Circle */
+    --gradient-violet-blue: hsla(256, 72%, 46%, 0.9);
+    --gradient-persian-blue: hsla(241, 72%, 46%, 0.4);
+
+    /* ---------------------------------Natural */
+    --natural-white: hsl(0, 0%, 100%);
+    --natural-pale-blue: hsl(221, 100%, 96%);
+    --natural-light-lavender: hsl(241, 100%, 89%);
+    --natural-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* General Styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font: 18px 'Hanken Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+main {
+    box-shadow: var(--natural-pale-blue) 1px 40px 70px;
+    border-radius: 20px;
+}
+
+/* Layouts Styles */
+.two-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.col-left,
+.col-right {
+    width: 100%;
+}
+
+/* Results Section */
+.result-section {
+    background: linear-gradient(var(--gradient-light-slate-blue), var(--gradient-light-royal-blue));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.result-section .circle {
+    background: linear-gradient(var(--gradient-violet-blue), var(--gradient-persian-blue));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+.result-section .circle strong {
+    font-size: 50px;
+    color: var(--natural-pale-blue);
+}
+
+.result-section .circle p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--natural-light-lavender);
+}
+
+.result-section h1 {
+    color: var(--natural-light-lavender);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 0 15px 0;
+}
+
+.result-section .description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-section .description-section .text-score {
+    color: var(--natural-pale-blue);
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.result-section .description-section .description {
+    width: 60%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--natural-light-lavender);
+}
+
+/* Summary Section */
+.summary-section .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-section .card-container .card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.summary-section .card-container .card:nth-of-type(1) {
+    display: flex;
+    justify-content: start;
+}
+
+.summary-section .card-container .card h2 {
+    font-size: 18px;
+    font-weight: 400;
+    /* margin-top: 0; */
+}
+
+.summary-section .card-container .card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.summary-section .card-container .card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#reaction {
+    background: var(--primary-red);
+    color: var(--primary-red-font);
+}
+
+#memory {
+    background: var(--primary-yellow);
+    color: var(--primary-yellow-font);
+}
+
+#verbal {
+    background: var(--primary-green);
+    color: var(--primary-green-font);
+}
+
+#visual {
+    background: var(--primary-blue);
+    color: var(--primary-blue-font);
+}
+
+.summary-section button {
+    background: var(--natural-dark-gray-blue);
+    color: var(--natural-pale-blue);
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    margin: 0 20px;
+    height: 45px;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+}
+
+.summary-section button:hover {
+    background: linear-gradient(var(--gradient-light-slate-blue), var(--gradient-light-royal-blue));
+}
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* -------------------------------------------------- Mobile size */
+@media screen and (max-width: 550px) {
+
+    /* Layouts Style */
+    body {
+        justify-content: space-between;
+    }
+
+    .two-column {
+        flex-direction: column;
+    }
+
+    /* Result Section */
+    .result-section {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    /*  */
+    .summary-section .card-container {
+        height: 100%;
+    }
+
+    .summary-section .card-container .card {
+        margin: 0px 40px;
+    }
+
+    .summary-section button {
+        margin: 0 40px 20px;
+    }
+
+    /* Footer */
+    .attribution {
+        position: static;
+        margin-top: 20px;
+    }
+}
